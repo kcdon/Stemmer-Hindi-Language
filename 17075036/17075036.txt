@@ -1,0 +1,42 @@
+Does the Porter Stemmer work for Hindi Language?
+
+Stemming is the process of reducing inflected words to their stem, base or root form. A Stem need not always be identical to the morphological root of the word.
+
+Stemming Algorithms generally conflate morphologically similar terms into a single term without doing an exhaustive morphological investigation. 
+
+Inflections are word elements that indicate grammatical relationships among the words in a sentence.
+Examples:
+The verb "walked" is in the past tense; we know this because of the inflectional ending "ed".
+
+The noun "girls" is plural. We know this because of the 's' that has been added to the singular word girl.
+
+Porter (1980) proposed an algorithm for Suffix Stripping, which is probably the most widely used algorithm for stemming in English.
+It is a rule-based algorithm and is best suited for inflected languages such as English. It isn't a hard and fast linguistic-based approach.
+
+Hindi too, on the other hand, is an inflected language but Hindi is a HIGHLY INFLECTED LANGUAGE. So any suffix stripping algorithm must work decently in Hindi Stemming. Words in Hindi are inflected to express the gender, number, person and the tense. Our task will be just to find suffixes that represent different grammatical categories such as tense, case, voice, aspect, person, number, gender, mood, definiteness.
+
+Examples:
+In the present tense,
+
+For masculine gender:
+मैं पढ़- ता हूँ | (main padh-taa hoon) = I read.
+Suffix – ता हूँ (taa hoon)  
+
+For feminine gender :  
+मैं पढ़- ती हूँ | (main padh-tee hoon) =I read.
+Suffix – ती हूँ (tee hoon)  
+
+For masculine gender:
+Singular: लड़का (ladkaa) =Boy
+Plural : लड़के (ladke) = Boys
+
+The end sound of -aa in लड़का  changed to – e
+
+No stemmer is 100% accurate, so is this one. But we can safely assume that Suffix Stripping algorithm works decently for Hindi Stemming.
+
+Note that we must not remove Prefixes in Hindi as they are generally derivative, i.e. they change the meaning.
+Example:
+पुत्र (Putr), सुपुत्र (Suputr) & कुपुत्र (Kuputr) have different meanings.
+
+Being a heavily inflected language can be a negative too. Because we cannot always have list of all suffixes in Hindi.
+For example, वान - धनवान , गुणवान cannot be identified by the above approach.
