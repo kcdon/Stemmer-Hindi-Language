@@ -24,9 +24,9 @@ suffixes = {
     5: [u"ाएंगी",u"ाएंगे",u"ाऊंगी",u"ाऊंगा",u"ाइयाँ",u"ाइयों",u"ाइयां"],
 } #suffixes tin hindi language that change tense, gender, number but not the meaning
 
-stems=[]
+stems=list()
 for word in words_list:
-    for L in 5, 4, 3, 2, 1:
+    for L in range(1,5): 
         if len(word) >= L + 1:
             for suffix in suffixes[L]:
                 if word.endswith(suffix):
